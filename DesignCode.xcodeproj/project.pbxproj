@@ -15,6 +15,7 @@
 		03C7FB7420D7F1AB005F17BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB7320D7F1AB005F17BC /* main.m */; };
 		03C7FB7E20D7F1AB005F17BC /* DesignCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB7D20D7F1AB005F17BC /* DesignCodeTests.m */; };
 		03C7FB8920D7F1AB005F17BC /* DesignCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB8820D7F1AB005F17BC /* DesignCodeUITests.m */; };
+		03C7FB9820D80D33005F17BC /* SectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB9720D80D33005F17BC /* SectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		03C7FB8420D7F1AB005F17BC /* DesignCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C7FB8820D7F1AB005F17BC /* DesignCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignCodeUITests.m; sourceTree = "<group>"; };
 		03C7FB8A20D7F1AB005F17BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03C7FB9620D80D33005F17BC /* SectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionViewController.h; sourceTree = "<group>"; };
+		03C7FB9720D80D33005F17BC /* SectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				03C7FB6520D7F19E005F17BC /* AppDelegate.m */,
 				03C7FB6720D7F19E005F17BC /* ViewController.h */,
 				03C7FB6820D7F19E005F17BC /* ViewController.m */,
+				03C7FB9620D80D33005F17BC /* SectionViewController.h */,
+				03C7FB9720D80D33005F17BC /* SectionViewController.m */,
 				03C7FB6A20D7F19E005F17BC /* Main.storyboard */,
 				03C7FB6D20D7F1AB005F17BC /* Assets.xcassets */,
 				03C7FB6F20D7F1AB005F17BC /* LaunchScreen.storyboard */,
@@ -264,6 +269,7 @@
 			files = (
 				03C7FB6920D7F19E005F17BC /* ViewController.m in Sources */,
 				03C7FB7420D7F1AB005F17BC /* main.m in Sources */,
+				03C7FB9820D80D33005F17BC /* SectionViewController.m in Sources */,
 				03C7FB6620D7F19E005F17BC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7WH73Q766U;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7WH73Q766U;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
