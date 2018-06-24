@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import <AVKit/AVKit.h>
+#import "SectionViewController.h"
+#import "Data.h"
+#import "SectionCollectionViewCell.h"
 @interface ViewController ()<UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
-
+@property (strong, nonatomic)Data *data;
 @end
 
 @implementation ViewController
@@ -26,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.data = [[Data alloc] init];
     self.scrollView.delegate = self;
     self.chapterCollectionView.delegate = self;
     self.chapterCollectionView.dataSource = self;
@@ -47,13 +51,40 @@
         self.deviceImageView.transform = CGAffineTransformMakeTranslation(0, -offsetY/4);
         self.backgroundImageView.transform = CGAffineTransformMakeTranslation(0, -offsetY/5);
     }
+//    UICollectionView *collectionView = (UICollectionView *)scrollView;
+//    if (collectionView) {
+//        for (UICollectionViewCell *cell in collectionView.visibleCells) {
+//            NSIndexPath *indexPath = [collectionView indexPathForCell:cell];
+//            UICollectionViewLayoutAttributes *attributes = [collectionView layoutAttributesForItemAtIndexPath:indexPath];
+//            CGRect cellFrame = [collectionView convertRect:attributes.frame toView:self.view];
+//            NSLog(@"%@",NSStringFromCGRect(cellFrame));
+//        }
+//    }
+    
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return self.data.sections.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"sectionCell" forIndexPath:indexPath];
+    SectionCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"sectionCell" forIndexPath:indexPath];
+    NSDictionary<NSString *,NSString *> *section = self.data.sections[indexPath.row];
+    cell.titleLabel.text = section[@"title"];
+    cell.captionLabel.text = section[@"caption"];
+    cell.coverImageView.image = [UIImage imageNamed:section[@"image"]];
+    
     return cell;
 }
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"HomeToSection" sender:indexPath];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier  isEqual: @"HomeToSection"]) {
+        SectionViewController *sectionController = (SectionViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = sender;
+        NSDictionary *section = self.data.sections[indexPath.row];
+        sectionController.sections = self.data.sections;
+        sectionController.section = section;
+        sectionController.indexPath = indexPath;
+    }
+}
 @end

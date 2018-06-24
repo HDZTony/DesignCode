@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034F9F3320DF41AC00F1CBF7 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 034F9F3220DF41AC00F1CBF7 /* Data.m */; };
+		034F9F3620DF4A4400F1CBF7 /* SectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 034F9F3520DF4A4400F1CBF7 /* SectionCollectionViewCell.m */; };
+		0381FB9A20DD547A00389F21 /* TestimonialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB9920DD547A00389F21 /* TestimonialViewController.m */; };
+		0381FB9D20DD549600389F21 /* TestimonialCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB9C20DD549600389F21 /* TestimonialCollectionViewCell.m */; };
 		03C7FB6620D7F19E005F17BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB6520D7F19E005F17BC /* AppDelegate.m */; };
 		03C7FB6920D7F19E005F17BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB6820D7F19E005F17BC /* ViewController.m */; };
 		03C7FB6C20D7F19E005F17BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C7FB6A20D7F19E005F17BC /* Main.storyboard */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034F9F3120DF41AC00F1CBF7 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		034F9F3220DF41AC00F1CBF7 /* Data.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		034F9F3420DF4A4400F1CBF7 /* SectionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionCollectionViewCell.h; sourceTree = "<group>"; };
+		034F9F3520DF4A4400F1CBF7 /* SectionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionCollectionViewCell.m; sourceTree = "<group>"; };
+		0381FB9820DD547A00389F21 /* TestimonialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestimonialViewController.h; sourceTree = "<group>"; };
+		0381FB9920DD547A00389F21 /* TestimonialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestimonialViewController.m; sourceTree = "<group>"; };
+		0381FB9B20DD549600389F21 /* TestimonialCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestimonialCollectionViewCell.h; sourceTree = "<group>"; };
+		0381FB9C20DD549600389F21 /* TestimonialCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestimonialCollectionViewCell.m; sourceTree = "<group>"; };
 		03C7FB6120D7F19E005F17BC /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C7FB6420D7F19E005F17BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		03C7FB6520D7F19E005F17BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,9 +120,17 @@
 				03C7FB6520D7F19E005F17BC /* AppDelegate.m */,
 				03C7FB6720D7F19E005F17BC /* ViewController.h */,
 				03C7FB6820D7F19E005F17BC /* ViewController.m */,
+				034F9F3120DF41AC00F1CBF7 /* Data.h */,
+				034F9F3220DF41AC00F1CBF7 /* Data.m */,
+				034F9F3420DF4A4400F1CBF7 /* SectionCollectionViewCell.h */,
+				034F9F3520DF4A4400F1CBF7 /* SectionCollectionViewCell.m */,
 				03C7FB9620D80D33005F17BC /* SectionViewController.h */,
 				03C7FB9720D80D33005F17BC /* SectionViewController.m */,
 				03C7FB6A20D7F19E005F17BC /* Main.storyboard */,
+				0381FB9820DD547A00389F21 /* TestimonialViewController.h */,
+				0381FB9920DD547A00389F21 /* TestimonialViewController.m */,
+				0381FB9B20DD549600389F21 /* TestimonialCollectionViewCell.h */,
+				0381FB9C20DD549600389F21 /* TestimonialCollectionViewCell.m */,
 				03C7FB6D20D7F1AB005F17BC /* Assets.xcassets */,
 				03C7FB6F20D7F1AB005F17BC /* LaunchScreen.storyboard */,
 				03C7FB7220D7F1AB005F17BC /* Info.plist */,
@@ -269,8 +289,12 @@
 			files = (
 				03C7FB6920D7F19E005F17BC /* ViewController.m in Sources */,
 				03C7FB7420D7F1AB005F17BC /* main.m in Sources */,
+				034F9F3620DF4A4400F1CBF7 /* SectionCollectionViewCell.m in Sources */,
 				03C7FB9820D80D33005F17BC /* SectionViewController.m in Sources */,
 				03C7FB6620D7F19E005F17BC /* AppDelegate.m in Sources */,
+				034F9F3320DF41AC00F1CBF7 /* Data.m in Sources */,
+				0381FB9D20DD549600389F21 /* TestimonialCollectionViewCell.m in Sources */,
+				0381FB9A20DD547A00389F21 /* TestimonialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
