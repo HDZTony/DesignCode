@@ -13,6 +13,8 @@
 #import "SectionCollectionViewCell.h"
 @interface ViewController ()<UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic)Data *data;
+@property (nonatomic,assign,setter=isStatusBarHidden:) BOOL statusBarHidden;
+
 @end
 
 @implementation ViewController
@@ -26,10 +28,24 @@
         [player play];
     }];
 }
-
+-(BOOL)prefersStatusBarHidden{
+    return self.statusBarHidden;
+}
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation{
+    return UIStatusBarAnimationSlide;
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.statusBarHidden = NO;
+    [UIView animateWithDuration:0.4 animations:^{
+        [self setNeedsStatusBarAppearanceUpdate];
+    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.data = [[Data alloc] init];
+    //[self setStatusBarBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
+    [self addBlurStatusBar];
     self.scrollView.delegate = self;
     self.chapterCollectionView.delegate = self;
     self.chapterCollectionView.dataSource = self;
@@ -60,6 +76,7 @@
 //            NSLog(@"%@",NSStringFromCGRect(cellFrame));
 //        }
 //    }
+
     
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -71,7 +88,6 @@
     cell.titleLabel.text = section[@"title"];
     cell.captionLabel.text = section[@"caption"];
     cell.coverImageView.image = [UIImage imageNamed:section[@"image"]];
-    
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -85,6 +101,27 @@
         sectionController.sections = self.data.sections;
         sectionController.section = section;
         sectionController.indexPath = indexPath;
+        self.statusBarHidden = YES;
+        [UIView animateWithDuration:0.4 animations:^{
+            [self setNeedsStatusBarAppearanceUpdate];
+        }];
     }
+}
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)setStatusBarBackgroundColor:(UIColor *)color{
+    UIView * statusBar = [[UIApplication sharedApplication] valueForKeyPath:@"statusBarWindow.statusBar"];
+    statusBar.backgroundColor = color;
+}
+
+- (void)addBlurStatusBar{
+    UIApplication *application = [UIApplication sharedApplication];
+    CGFloat statusBarHeight = application.statusBarFrame.size.height;
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *blurStatusBar = [[UIVisualEffectView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, statusBarHeight)];
+    blurStatusBar.effect = blur;
+    [self.view addSubview:blurStatusBar];
 }
 @end

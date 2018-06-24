@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-Yh-wkX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crt-fP-Qwe" userLabel="Hero View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
@@ -432,7 +432,7 @@
                             <constraint firstItem="o2G-Yh-wkX" firstAttribute="leading" secondItem="WPY-Jc-5ZP" secondAttribute="leading" id="5d8-5Q-sAR"/>
                             <constraint firstItem="WPY-Jc-5ZP" firstAttribute="trailing" secondItem="o2G-Yh-wkX" secondAttribute="trailing" id="836-X9-Gi6"/>
                             <constraint firstAttribute="bottom" secondItem="o2G-Yh-wkX" secondAttribute="bottom" id="apB-kL-zo2"/>
-                            <constraint firstItem="o2G-Yh-wkX" firstAttribute="top" secondItem="GH0-dx-4kv" secondAttribute="top" id="vWr-03-bdY"/>
+                            <constraint firstItem="o2G-Yh-wkX" firstAttribute="top" secondItem="GH0-dx-4kv" secondAttribute="top" constant="20" id="vWr-03-bdY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WPY-Jc-5ZP"/>
                     </view>
@@ -696,7 +696,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNG-R1-KdL">
-                                                <rect key="frame" x="20" y="20" width="52" height="36"/>
+                                                <rect key="frame" x="20" y="40" width="52" height="36"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JwZ-Xh-GwL">
                                                     <rect key="frame" x="0.0" y="0.0" width="52" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -730,7 +730,7 @@
                                             <constraint firstItem="FS5-I9-53e" firstAttribute="top" secondItem="V1v-at-Rtw" secondAttribute="top" id="2A5-HB-FgH"/>
                                             <constraint firstItem="FS5-I9-53e" firstAttribute="leading" secondItem="V1v-at-Rtw" secondAttribute="leading" id="7Ls-ne-rZ5"/>
                                             <constraint firstAttribute="bottom" secondItem="fnn-ho-bYa" secondAttribute="bottom" constant="30" id="EV2-mj-TQw"/>
-                                            <constraint firstItem="PNG-R1-KdL" firstAttribute="top" secondItem="V1v-at-Rtw" secondAttribute="top" constant="20" id="NpS-aP-4tA"/>
+                                            <constraint firstItem="PNG-R1-KdL" firstAttribute="top" secondItem="V1v-at-Rtw" secondAttribute="top" constant="40" id="NpS-aP-4tA"/>
                                             <constraint firstAttribute="trailing" secondItem="FS5-I9-53e" secondAttribute="trailing" id="UKd-cU-JVK"/>
                                             <constraint firstAttribute="bottom" secondItem="FS5-I9-53e" secondAttribute="bottom" id="VG6-pZ-FW9"/>
                                             <constraint firstAttribute="height" constant="420" id="Yf7-xd-rpT"/>
