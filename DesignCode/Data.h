@@ -10,4 +10,5 @@
 
 @interface Data : NSObject
 @property (copy, nonatomic) NSArray <NSDictionary *> *sections;
+@property (copy, nonatomic) NSArray <NSDictionary *> *allBookmarks;
 @end

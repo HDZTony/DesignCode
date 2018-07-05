@@ -6,18 +6,18 @@
 //  Copyright © 2018年 mobi.hdz. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 #import <AVKit/AVKit.h>
 #import "SectionViewController.h"
 #import "Data.h"
 #import "SectionCollectionViewCell.h"
-@interface ViewController ()<UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
+@interface HomeViewController ()<UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic)Data *data;
 @property (nonatomic,assign,setter=isStatusBarHidden:) BOOL statusBarHidden;
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController
 - (IBAction)playButtonTaped:(id)sender {
     NSString *urlString = @"https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175";
     NSURL *url = [NSURL URLWithString:urlString];
@@ -44,8 +44,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.data = [[Data alloc] init];
-    //[self setStatusBarBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
     [self addBlurStatusBar];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.scrollView.delegate = self;
     self.chapterCollectionView.delegate = self;
     self.chapterCollectionView.dataSource = self;
@@ -60,6 +60,8 @@
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetY = scrollView.contentOffset.y;
+    BOOL navigationIsHidden = offsetY <= 0;
+    [self.navigationController setNavigationBarHidden:navigationIsHidden animated:YES];
     if (offsetY < 0) {
         self.heroView.transform = CGAffineTransformMakeTranslation(0, offsetY);
         self.playVisualEffectView.transform = CGAffineTransformMakeTranslation(0, -offsetY/3);
@@ -111,10 +113,10 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (void)setStatusBarBackgroundColor:(UIColor *)color{
-    UIView * statusBar = [[UIApplication sharedApplication] valueForKeyPath:@"statusBarWindow.statusBar"];
-    statusBar.backgroundColor = color;
-}
+//- (void)setStatusBarBackgroundColor:(UIColor *)color{
+//    UIView * statusBar = [[UIApplication sharedApplication] valueForKeyPath:@"statusBarWindow.statusBar"];
+//    statusBar.backgroundColor = color;
+//}
 
 - (void)addBlurStatusBar{
     UIApplication *application = [UIApplication sharedApplication];
