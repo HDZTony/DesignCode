@@ -13,6 +13,8 @@
 		0381FB9A20DD547A00389F21 /* TestimonialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB9920DD547A00389F21 /* TestimonialViewController.m */; };
 		0381FB9D20DD549600389F21 /* TestimonialCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB9C20DD549600389F21 /* TestimonialCollectionViewCell.m */; };
 		0385625F20ED10BA00F5E9D7 /* BookmarksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0385625E20ED10BA00F5E9D7 /* BookmarksTableViewCell.m */; };
+		038D79F920F07AE0002A84C1 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038D79F820F07AE0002A84C1 /* MoreViewController.m */; };
+		03B3EB5E20EFDCC1007CD836 /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B3EB5D20EFDCC1007CD836 /* WebViewViewController.m */; };
 		03B5AECD20E3ED1300E9656B /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B5AECC20E3ED1300E9656B /* ChaptersViewController.m */; };
 		03C7FB6620D7F19E005F17BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB6520D7F19E005F17BC /* AppDelegate.m */; };
 		03C7FB6920D7F19E005F17BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7FB6820D7F19E005F17BC /* HomeViewController.m */; };
@@ -55,6 +57,10 @@
 		0381FB9C20DD549600389F21 /* TestimonialCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestimonialCollectionViewCell.m; sourceTree = "<group>"; };
 		0385625D20ED10BA00F5E9D7 /* BookmarksTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookmarksTableViewCell.h; sourceTree = "<group>"; };
 		0385625E20ED10BA00F5E9D7 /* BookmarksTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookmarksTableViewCell.m; sourceTree = "<group>"; };
+		038D79F720F07AE0002A84C1 /* MoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		038D79F820F07AE0002A84C1 /* MoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		03B3EB5C20EFDCC1007CD836 /* WebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewViewController.h; sourceTree = "<group>"; };
+		03B3EB5D20EFDCC1007CD836 /* WebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewViewController.m; sourceTree = "<group>"; };
 		03B5AECB20E3ED1300E9656B /* ChaptersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChaptersViewController.h; sourceTree = "<group>"; };
 		03B5AECC20E3ED1300E9656B /* ChaptersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChaptersViewController.m; sourceTree = "<group>"; };
 		03C7FB6120D7F19E005F17BC /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,10 @@
 				0381FB9920DD547A00389F21 /* TestimonialViewController.m */,
 				0381FB9B20DD549600389F21 /* TestimonialCollectionViewCell.h */,
 				0381FB9C20DD549600389F21 /* TestimonialCollectionViewCell.m */,
+				038D79F720F07AE0002A84C1 /* MoreViewController.h */,
+				038D79F820F07AE0002A84C1 /* MoreViewController.m */,
+				03B3EB5C20EFDCC1007CD836 /* WebViewViewController.h */,
+				03B3EB5D20EFDCC1007CD836 /* WebViewViewController.m */,
 				03C7FB6D20D7F1AB005F17BC /* Assets.xcassets */,
 				03C7FB6F20D7F1AB005F17BC /* LaunchScreen.storyboard */,
 				03C7FB7220D7F1AB005F17BC /* Info.plist */,
@@ -308,6 +318,8 @@
 				0385625F20ED10BA00F5E9D7 /* BookmarksTableViewCell.m in Sources */,
 				034F9F3620DF4A4400F1CBF7 /* SectionCollectionViewCell.m in Sources */,
 				03C7FB9820D80D33005F17BC /* SectionViewController.m in Sources */,
+				03B3EB5E20EFDCC1007CD836 /* WebViewViewController.m in Sources */,
+				038D79F920F07AE0002A84C1 /* MoreViewController.m in Sources */,
 				03C7FB6620D7F19E005F17BC /* AppDelegate.m in Sources */,
 				034F9F3320DF41AC00F1CBF7 /* Data.m in Sources */,
 				0369590820E49CFD00C67C21 /* BookmarksTableViewController.m in Sources */,
