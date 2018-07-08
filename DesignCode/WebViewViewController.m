@@ -43,7 +43,9 @@
 }
 - (void)dealloc
 {
-    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    if ([self isViewLoaded]) {
+        [self.webView removeObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress))];
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,12 +53,15 @@
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([keyPath isEqualToString:@"estimatedProgress"]) {
+    if ([keyPath isEqualToString:NSStringFromSelector(@selector(estimatedProgress))] && object == self.webView) {
         if (self.webView.estimatedProgress == 1) {
             self.navigationItem.title = self.webView.title;
         }else{
             self.navigationItem.title = @"Loading";
         }
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 /*

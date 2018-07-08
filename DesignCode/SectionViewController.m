@@ -24,9 +24,6 @@
     self.progressLabel.text = [NSString stringWithFormat:@"%ld/%lu",self.indexPath.row + 1,(unsigned long)self.sections.count ];
 }
 
-- (IBAction)closeButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 - (BOOL)prefersStatusBarHidden{
     return YES;
 }
